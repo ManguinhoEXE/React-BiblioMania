@@ -1,8 +1,15 @@
 
-const Message = () => {
+
+const Message = (props) => {
     return  (
         <div>
-            <h3>Mensaje...</h3>
+            <h3>Buenas Tardes</h3>
+            <div className="card">
+                <div className="person">
+                    <h4>{props.name} {props.lastname}</h4>
+                    <p>{props.note}</p>
+                </div>
+            </div>
         </div>
     )
 }

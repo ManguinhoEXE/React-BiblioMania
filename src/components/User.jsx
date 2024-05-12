@@ -6,7 +6,7 @@ const User = () => {
     const [employees, setEmployees] = React.useState([])
     React.useEffect(() => {
         getData()
-    }, [])
+    })
     const getData = async () => {
         const data = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         const emp = await data.json()

@@ -24,6 +24,7 @@ function App() {
             <Link to="QuienesSomos" className='seccion'>Quienes Somos</Link>
             <Link to="Mensaje" className='seccion'>Mensaje</Link>
             <Link to="Prestamo" className='seccion'>Prestamo</Link>
+
           </div>
         </nav>
 
@@ -32,7 +33,7 @@ function App() {
           <Route path='QuienesSomos/:id' element={<User />} />
           <Route path='/' element={<Inicio />} />
           <Route path='QuienesSomos' element={<AboutUs />} />
-          <Route path='Mensaje' element={<Message />} />
+          <Route path='Mensaje' element={<Message name='Janns' lastname='Patino Saucedo' note='Espero y disfrute de todos nuestros productos' />} />
           <Route path='Prestamo' element={<Rent />} />
         </Routes>
       </div>

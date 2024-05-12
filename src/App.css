@@ -60,7 +60,7 @@
     margin-inline: 30%;
     display: grid;
     justify-content: center;
-    background-color: rgb(216, 216, 216);
+    background-color: #d8d8d8;
     border-radius: 2vh;
 }
 
@@ -72,6 +72,22 @@
     color: #0d7575;
 }
 
-
-
 /* User */
+
+/* Message */
+
+.card {
+    margin-inline: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8d8d8;
+    border-radius: 2vh;
+    margin-top: 5vh;
+}
+
+.person {
+    margin-inline: 30%;
+}
+
+/* Message */
