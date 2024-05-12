@@ -1,0 +1,77 @@
+/* navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a5c9c9;
+    border-radius: 2vh;
+}
+
+.title {
+    align-items: start;
+    margin-left: 5vh;
+}
+
+.seccions {
+    margin-right: 5vh;
+    display: inline-block;
+}
+
+.seccion {
+    color: #021d1d;
+    margin: 2vh;
+    text-decoration: none;
+}
+
+/* navbar */
+
+/* About Us */
+
+.list {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3vh;
+}
+
+.list-employees {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6vh 5vh;
+    border-bottom: 1px dotted #49df56;
+}
+
+.list-employees:hover {
+    background-color: #eeeee7;
+    border-radius: 2vh;
+}
+
+.link {
+    text-decoration: none;
+    color: #2a2c2b;
+}
+
+/* About Us */
+
+/* User */
+
+.employee {
+    margin-inline: 30%;
+    display: grid;
+    justify-content: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 2vh;
+}
+
+.name {
+    color: #021d1d;
+}
+
+.description {
+    color: #0d7575;
+}
+
+
+
+/* User */
