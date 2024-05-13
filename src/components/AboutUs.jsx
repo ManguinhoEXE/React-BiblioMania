@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
+import NavB from "./NavB";
 
 
 const AboutUs = () => {
@@ -13,18 +14,20 @@ const AboutUs = () => {
         setLista(employees)
     }
     return (
-        <div>
-            <h3>Lista de Empleados:</h3>
+        <Fragment>
+            <header>
+                <NavB />
+            </header>
+            <main>
+                <h3>Lista de Empleados:</h3>
 
-            <ul className="list">
-                {
-                    /*list.map((user) => (<li className="list-employees" key={user.id}>{user.name} - {user.email}</li>))*/
-                }
-                {
-                    list.map((user) => (<li className="list-employees" key={user.id}><Link className="link" to={`/quienesSomos/${user.id}`}>{user.name} - {user.email}</Link></li>))
-                }
-            </ul>
-        </div>
+                <ul className="list">
+                    {
+                        list.map((user) => (<li className="list-employees" key={user.id}><Link className="link" to={`/quienesSomos/${user.id}`}>{user.name} - {user.email}</Link></li>))
+                    }
+                </ul>
+            </main>
+        </Fragment >
     )
 }
 export default AboutUs
