@@ -1,9 +1,16 @@
+import { Fragment } from "react"
+import NavB from "./NavB"
 
 const Home = () => {
-    return  (
-        <div>
-            <h3>Inicio...</h3>
-        </div>
+    return (
+        <Fragment>
+            <header>
+                <NavB />
+            </header>
+            <main>
+
+            </main>
+        </Fragment>
     )
 }
 export default Home

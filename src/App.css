@@ -1,15 +1,19 @@
-/* navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #a5c9c9;
-    border-radius: 2vh;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Navbar */
+.navText {
+    font-weight: bold;
+    font-Family: "PT Sans", sans-serif;
 }
 
 .title {
     align-items: start;
     margin-left: 5vh;
+    margin-block: 0;
+    color: #a37941;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .seccions {
@@ -24,6 +28,14 @@
 }
 
 /* navbar */
+
+/* home */
+.home-text {
+    color: #a37941;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 /* About Us */
 
@@ -102,12 +114,14 @@
     display: block;
     margin-bottom: 2vh;
 }
+
 .container-table {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5vh;
 }
+
 .table {
     border-collapse: collapse;
     width: 80%;
