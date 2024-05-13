@@ -57,7 +57,7 @@
 /* User */
 
 .employee {
-    margin-inline: 30%;
+    margin-inline: 33%;
     display: grid;
     justify-content: center;
     background-color: #d8d8d8;
@@ -91,3 +91,33 @@
 }
 
 /* Message */
+
+/* Rent */
+.form {
+    display: grid;
+    justify-content: center;
+}
+
+.input {
+    display: block;
+    margin-bottom: 2vh;
+}
+.container-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+.table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.table td,
+.table th {
+    border: 0.1vh solid #888888;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Rent */
