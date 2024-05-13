@@ -95,19 +95,62 @@
 /* Rent */
 .form {
     display: grid;
+    align-items: center;
     justify-content: center;
+    margin-inline: 30%;
+    margin-block: 5%;
+    border-radius: 5vh;
+    border: 0.3vh solid #76d1d1;
+    background-color: rgb(231, 230, 230);
+}
+
+.title-from {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+    margin-left: 7%;
 }
 
 .input {
     display: block;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
+    width: 100%;
+    border: none;
+    background-color: #fffffff8;
+    border-radius: 3vh;
+    padding: 0.8vh;
 }
+
+.input:focus {
+    color: #495057;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #007bff40;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    margin-bottom: 3vh;
+    border: none;
+    border-radius: 2vh;
+    padding: 0.8vh;
+    padding-inline: 2vh;
+    cursor: pointer;
+}
+
 .container-table {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5vh;
 }
+
 .table {
     border-collapse: collapse;
     width: 80%;
@@ -116,8 +159,102 @@
 .table td,
 .table th {
     border: 0.1vh solid #888888;
-    padding: 8px;
+    padding: 1vh;
     text-align: left;
+}
+
+.button-crud-edit {
+    border: 0.3vh solid blue;
+    border-radius: 0.6vh;
+    background-color: blue;
+    color: #eeeee7;
+    padding: 0.7vh;
+    margin-right: 0.5vh;
+    cursor: pointer;
+}
+
+.button-crud-delete {
+    border: 0.3vh solid #fa0404;
+    border-radius: 0.6vh;
+    background-color: #ff0000;
+    color: #eeeee7;
+    padding: 0.7vh;
+    cursor: pointer;
+}
+
+.buttons {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.form-modal {
+    margin-bottom: 1rem;
+}
+
+.input-modal {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 3vh;
+}
+
+.input-modal:focus {
+    color: #495057;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.modal-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    margin-inline: 29.8vw;
+    margin-block: 10vh;
+    background-color: #c2c2c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    /* Asegura que el modal esté sobre otros elementos */
+    border-radius: 5vh;
+}
+
+.button-modal {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 2vh;
+    margin-bottom: 3vh;
+    border: none;
+    border-radius: 2vh;
+    padding: 0.8vh;
+    padding-inline: 2vh;
+    cursor: pointer;
+}
+.title-modal {
+    text-align: center;
+}
+
+.container-delete {
+    margin-block: 5vh;
+}
+.body-delate {
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.footer-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Rent */
