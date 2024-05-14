@@ -3,12 +3,19 @@
 main{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
 }
 
 /* Navbar */
 .navText {
     font-weight: bold;
     font-Family: "PT Sans", sans-serif;
+}
+
+.navb{
+    height: 10vh;
 }
 
 .title {
@@ -32,8 +39,6 @@ main{
     text-decoration: none;
 }
 
-/* navbar */
-
 /* home */
 .home-text {
     color: #a37941;
@@ -48,15 +53,17 @@ main{
     background-color: goldenrod;
     padding-left: 2%;
     padding-block: 2%;
-    margin-top: 5vh;
+    
     margin-bottom: 0;
     border-radius: 8px 8px 0 0;
 }
 
 .container-lista{
-    width: 40vw;
+    min-width: 40vw;
+    width: fit-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .list-employees:hover {
@@ -69,27 +76,33 @@ main{
     color: #2a2c2b;
 }
 
-/* About Us */
-
 /* User */
+.container-description{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3rem;
+    padding: 2%;
+}
+
+.container-description >span{
+    text-wrap: nowrap;
+}
 
 .employee {
-    margin-inline: 33%;
-    display: grid;
-    justify-content: center;
     background-color: #d8d8d8;
-    border-radius: 2vh;
+    border-radius: 0 0 8px 8px;
 }
 
 .name {
     color: #021d1d;
+    padding-top: 2%;
+    padding-left: 2%;
 }
 
 .description {
     color: #0d7575;
 }
 
-/* User */
 
 /* Message */
 
@@ -135,6 +148,7 @@ main{
     display: block;
     margin-bottom: 2vh;
 }
+
 .container-table {
     display: flex;
     justify-content: center;

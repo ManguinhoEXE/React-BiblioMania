@@ -19,10 +19,17 @@ const User = () => {
                 <NavB />
             </header>
             <main>
-                <h2>Datos del Empleado</h2>
-                <div className="employee">
-                    <h3 className="name">{employees.name}</h3>
-                    <p className="description">Website: {employees.website} <br /> Username: {employees.username}</p>
+                <div className="container-lista">
+                    <h3 className="title-table">Datos del Empleado</h3>
+                    <div className="employee">
+                        <h3 className="name">{employees.name}</h3>
+                        <div className="container-description">
+                            <span><b>Usuario:</b> {employees.username}</span>
+                            <span><b>Correo:</b> {employees.email}</span>
+                            <span><b>Telefono:</b> {employees.phone}</span>
+                            <span><b>Website:</b> {employees.website}</span>
+                        </div>
+                    </div>
                 </div>
             </main>
         </Fragment>
