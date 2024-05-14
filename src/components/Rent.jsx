@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react"
 import { Modal, ModalBody, ModalHeader, ModalFooter, } from 'reactstrap';
 import NavB from "./NavB";
-import {Button, Container, Form, FormControl, FormGroup, FormLabel } from "react-bootstrap";
+import { Button, Form, FormControl, FormGroup, FormLabel } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 
 const Rent = () => {
@@ -16,6 +16,12 @@ const Rent = () => {
 
     const saveUser = (e) => {
         e.preventDefault();
+
+        const existingUser = list.find(user => user.name === name && user.lastname === lastname);
+        if (existingUser) {
+            alert('Ya existe un usuario con ese nombre y apellido.');
+            return;
+        }
         if (!name || !lastname || !book || !author || !editorial || !Year) return alert('Llenar todos los campos')
 
         setList([
@@ -86,7 +92,7 @@ const Rent = () => {
             <header>
                 <NavB />
             </header>
-            <main className="main-rent">
+            <main className="main-rent overflow-auto">
                 <div className="container-form">
                     <h3 className="title-table title-form">Solicitar prestamo</h3>
                     <Form className="form-rent" onSubmit={saveUser}>
@@ -122,7 +128,7 @@ const Rent = () => {
                         <Button type="submit" className="button">Registrar</Button>
                     </Form>
                 </div>
-                <div fluid className="container-table">
+                <div className="container-table">
                     <Table striped borderless hover className="table">
                         <thead>
                             <tr>
@@ -153,14 +159,14 @@ const Rent = () => {
                         </tbody>
                     </Table>
 
-                    <Modal isOpen={ModalEdit} className="modal-fullscreen">
+                    <Modal isOpen={ModalEdit}>
                         <ModalHeader>
                             <div>
-                                <h3 className="title-modal">Editar Prestamo</h3>
+                                <h3>Editar Prestamo</h3>
                             </div>
                         </ModalHeader>
                         <ModalBody>
-                            <div className="form-modal">
+                            <div className="form-group">
 
                                 <label className="label">ID</label>
                                 <input
@@ -239,11 +245,11 @@ const Rent = () => {
                             </div>
                         </ModalBody>
                         <ModalFooter className="footer-modal">
-                            <button className="button-modal" onClick={() => edit()}>
+                            <button className="button-modal-update" onClick={() => edit()}>
                                 Actualizar
                             </button>
                             <button
-                                className="button-modal"
+                                className="button-modal-cancel"
                                 onClick={() => setModalEdit(false)}
                             >
                                 Cancelar
@@ -252,17 +258,17 @@ const Rent = () => {
                     </Modal>
                 </div>
 
-                <Modal isOpen={ModalDelete} className="modal-fullscreen">
+                <Modal isOpen={ModalDelete}>
                     <div className="container-delete">
                         <ModalBody className="body-delate">
                             Estás Seguro que deseas eliminar el registro {userSelect && userSelect.id}
                         </ModalBody>
-                        <ModalFooter className="footer-delete">
-                            <button className="button-modal" onClick={() => Delete()}>
+                        <ModalFooter>
+                            <button className="button-modal-yes" onClick={() => Delete()}>
                                 Sí
                             </button>
                             <button
-                                className="button-modal"
+                                className="button-modal-no"
                                 onClick={() => setModalDelete(false)}
                             >
                                 No

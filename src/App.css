@@ -147,7 +147,7 @@ main{
 }
 
 .label {
-    margin-left: 7%;
+    margin-left: 3%;
 }
 
 .input {
@@ -187,8 +187,8 @@ input[type=number] {
 }
 
 .button-crud-edit {
-    border: 0.3vh solid blue;
     border-radius: 0.6vh;
+    border: 0.3vh solid blue;
     background-color: blue;
     color: #eeeee7;
     padding: 0.7vh;
@@ -197,8 +197,8 @@ input[type=number] {
 }
 
 .button-crud-delete {
-    border: 0.3vh solid #fa0404;
     border-radius: 0.6vh;
+    border: 0.3vh solid #fa0404;
     background-color: #ff0000;
     color: #eeeee7;
     padding: 0.7vh;
@@ -251,7 +251,7 @@ input[type=number] {
     border-radius: 5vh;
 }
 
-.button-modal {
+.button-modal-cancel {
     display: inline;
     align-items: center;
     justify-content: center;
@@ -262,9 +262,55 @@ input[type=number] {
     padding: 0.8vh;
     padding-inline: 2vh;
     cursor: pointer;
+    border: 0.3vh solid #fa0404;
+    background-color: #ff0000;
+    color: white;
 }
-.title-modal {
-    text-align: center;
+.button-modal-update {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 2vh;
+    margin-bottom: 3vh;
+    border: none;
+    border-radius: 2vh;
+    padding: 0.8vh;
+    padding-inline: 2vh;
+    cursor: pointer;
+    border: 0.3vh solid blue;
+    background-color: blue;
+    color: white;
+}
+.button-modal-yes {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 2vh;
+    margin-bottom: 3vh;
+    border: none;
+    border-radius: 1.5vh;
+    padding: 0.5vh;
+    padding-inline: 1.8vh;
+    cursor: pointer;
+    border: 0.3vh solid #fa0404;
+    background-color: #ff0000;
+    color: white;
+}
+
+.button-modal-no {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 2vh;
+    margin-bottom: 3vh;
+    border: none;
+    border-radius: 1.5vh;
+    padding: 0.5vh;
+    padding-inline: 1.8vh;
+    cursor: pointer;
+    border: 0.3vh solid #313131;
+    background-color: #313131;
+    color: white;
 }
 
 .container-delete {
