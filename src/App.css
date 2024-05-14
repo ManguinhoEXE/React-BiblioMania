@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 90vh;
+    width: 100vw;
+}
+
+.main-rent{
+    flex-direction: row;
+    gap: 3rem;
 }
 
 /* Navbar */
@@ -53,7 +58,6 @@ main{
     background-color: goldenrod;
     padding-left: 2%;
     padding-block: 2%;
-    
     margin-bottom: 0;
     border-radius: 8px 8px 0 0;
 }
@@ -120,24 +124,26 @@ main{
     margin-inline: 30%;
 }
 
-/* Message */
 
 /* Rent */
-.form {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    margin-inline: 30%;
-    margin-block: 5%;
-    border-radius: 5vh;
-    border: 0.3vh solid #76d1d1;
+.container-form {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(231, 230, 230);
+    padding: 0;
+    min-width: 30vw;
+    margin-left: 2%;
 }
 
-.title-from {
+.title-form{
+    border-radius: 0;
+}
+
+.form-rent{
+    margin: 2%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    
 }
 
 .label {
@@ -149,7 +155,19 @@ main{
     margin-bottom: 2vh;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
 .container-table {
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,4 +280,9 @@ main{
     justify-content: center;
 }
 
-/* Rent */
+@media (max-width:1100px) {
+    .main-rent{
+        flex-direction: column;
+        justify-content: center;
+    }
+}

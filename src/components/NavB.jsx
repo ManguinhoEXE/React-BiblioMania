@@ -6,7 +6,7 @@ import {
 const NavB = () => {
     return (
         <Navbar bg='dark' data-bs-theme="dark" expand="lg" className="bg-body-tertiary dark navb">
-            <Container fluid style={{ paddingInline: "2%" }} className='container-nav-item'>
+            <Container fluidyyy className='container-nav-item'>
                 <Navbar.Brand style={{ color: "#ebb24d" }} className='navText' href="#home">BiblioMania</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

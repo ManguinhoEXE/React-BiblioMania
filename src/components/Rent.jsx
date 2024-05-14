@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from "react"
 import { Modal, ModalBody, ModalHeader, ModalFooter, } from 'reactstrap';
 import NavB from "./NavB";
+import {Button, Container, Form, FormControl, FormGroup, FormLabel } from "react-bootstrap";
+import Table from "react-bootstrap/Table";
 
 const Rent = () => {
     const [id, setId] = React.useState(1)
@@ -84,27 +86,44 @@ const Rent = () => {
             <header>
                 <NavB />
             </header>
-            <main>
-                <div className="form">
-                    <h3 className="title-from">Solicitar prestamo</h3>
-                    <form onSubmit={saveUser}>
-                        <label className="label">Nombre:</label>
-                        <input type="text" className="input" onChange={e => setName(e.target.value.trim())} />
-                        <label className="label">Apellido:</label>
-                        <input type="text" className="input" onChange={e => setLastname(e.target.value.trim())} />
-                        <label className="label">Libro:</label>
-                        <input type="text" className="input" onChange={e => setBook(e.target.value.trim())} />
-                        <label className="label">Autor:</label>
-                        <input type="text" className="input" onChange={e => setAuthor(e.target.value.trim())} />
-                        <label className="label">Editorial:</label>
-                        <input type="text" className="input" onChange={e => setEditorial(e.target.value.trim())} />
-                        <label className="label">Año:</label>
-                        <input type="number" className="input" onChange={e => setYear(e.target.value.trim())} />
-                        <button type="submit" className="button">registrar</button>
-                    </form>
+            <main className="main-rent">
+                <div className="container-form">
+                    <h3 className="title-table title-form">Solicitar prestamo</h3>
+                    <Form className="form-rent" onSubmit={saveUser}>
+                        <FormGroup>
+                            <FormLabel>Nombre</FormLabel>
+                            <FormControl type="text" placeholder="Pedro" onChange={e => setName(e.target.value.trim())}></FormControl>
+                        </FormGroup>
+
+                        <FormGroup>
+                            <FormLabel>Apellido</FormLabel>
+                            <FormControl type="text" placeholder="Mendoza Miranda" onChange={e => setLastname(e.target.value.trim())}></FormControl>
+                        </FormGroup>
+
+                        <FormGroup>
+                            <FormLabel>Libro</FormLabel>
+                            <FormControl type="text" placeholder="El principito" onChange={e => setBook(e.target.value.trim())}></FormControl>
+                        </FormGroup>
+
+                        <FormGroup>
+                            <FormLabel>Autor</FormLabel>
+                            <FormControl type="text" placeholder="Antoine de Saint-Exupéry" onChange={e => setAuthor(e.target.value.trim())}></FormControl>
+                        </FormGroup>
+
+                        <FormGroup>
+                            <FormLabel>Editorial</FormLabel>
+                            <FormControl type="text" placeholder="Salamandra" onChange={e => setEditorial(e.target.value.trim())}></FormControl>
+                        </FormGroup>
+
+                        <FormGroup>
+                            <FormLabel>Año</FormLabel>
+                            <FormControl type="number" placeholder="2023" onChange={e => setYear(e.target.value.trim())}></FormControl>
+                        </FormGroup>
+                        <Button type="submit" className="button">Registrar</Button>
+                    </Form>
                 </div>
-                <div className="container-table">
-                    <table className="table">
+                <div fluid className="container-table">
+                    <Table striped borderless hover className="table">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -132,7 +151,7 @@ const Rent = () => {
                                 </tr>))
                             }
                         </tbody>
-                    </table>
+                    </Table>
 
                     <Modal isOpen={ModalEdit} className="modal-fullscreen">
                         <ModalHeader>
