@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavB from "./NavB";
+import { ListGroup, ListGroupItem } from "react-bootstrap";
+
 
 
 const AboutUs = () => {
@@ -19,13 +21,12 @@ const AboutUs = () => {
                 <NavB />
             </header>
             <main>
-                <h3>Lista de Empleados:</h3>
-
-                <ul className="list">
-                    {
-                        list.map((user) => (<li className="list-employees" key={user.id}><Link className="link" to={`/quienesSomos/${user.id}`}>{user.name} - {user.email}</Link></li>))
-                    }
-                </ul>
+                <div className="container-lista">
+                    <h3 className="title-table">Lista de Empleados:</h3>
+                    <ListGroup>
+                        {list.map((user) => (<ListGroupItem key={user.id} style={{borderBlockEndStyle:"solid", borderWidth:"2px",borderBlockEndColor:"lightgray"}}><Link className="link " to={`/quienesSomos/${user.id}`}>{user.name} - {user.email}</Link></ListGroupItem>))}
+                    </ListGroup>
+                </div>
             </main>
         </Fragment >
     )

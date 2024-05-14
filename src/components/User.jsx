@@ -1,5 +1,6 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { useParams } from "react-router-dom"
+import NavB from "./NavB"
 
 const User = () => {
     const { id } = useParams()
@@ -13,14 +14,18 @@ const User = () => {
         setEmployees(emp)
     }
     return (
-        <div>
-            <h2>Datos del Empleado</h2>
-            <div className="employee">
-                <h3 className="name">{employees.name}</h3>
-                <p className="description">Website: {employees.website} <br /> Username: {employees.username}</p>
-            </div>
-
-        </div>
+        <Fragment>
+            <header>
+                <NavB />
+            </header>
+            <main>
+                <h2>Datos del Empleado</h2>
+                <div className="employee">
+                    <h3 className="name">{employees.name}</h3>
+                    <p className="description">Website: {employees.website} <br /> Username: {employees.username}</p>
+                </div>
+            </main>
+        </Fragment>
     )
 }
 export default User
