@@ -8,7 +8,6 @@ const Message = (props) => {
                 <NavB />
             </header>
             <main>
-                <h3>Buenas Tardes</h3>
                 <div className="card">
                     <div className="person">
                         <h4>{props.name} {props.lastname}</h4>
