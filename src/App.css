@@ -23,16 +23,6 @@ main{
     height: 10vh;
 }
 
-.title {
-    align-items: start;
-    margin-left: 5vh;
-    margin-block: 0;
-    color: #a37941;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 .seccions {
     margin-right: 5vh;
     display: inline-block;
@@ -45,11 +35,26 @@ main{
 }
 
 /* home */
-.home-text {
-    color: #a37941;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    font-weight: bold;
+
+.hero-text > h1{
+    color: goldenrod;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: "PT Sans", sans-serif;
+}
+
+.container-card{
+    width: 100vw;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+
+}
+
+.text-card{
+    font-weight: 900;
+    font-family: "PT Sans", sans-serif;
+    text-wrap:wrap;
 }
 
 /* About Us */
@@ -330,5 +335,13 @@ input[type=number] {
     .main-rent{
         flex-direction: column;
         justify-content: center;
+    }
+
+    .hero-text{
+        font-size: 1rem;
+    }
+    
+    .container-card{
+        grid-auto-flow: row;
     }
 }
