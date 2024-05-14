@@ -14,15 +14,15 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path='QuienesSomos/:id' element={<User />} />
-        <Route path='/' element={<Home />} />
-        <Route path='QuienesSomos' element={<AboutUs />} />
-        <Route path='Mensaje' element={<Message name='Janns' lastname='Patino Saucedo' note='Espero y disfrute de todos nuestros productos' />}/>
-        <Route path='Prestamo' element={<Rent />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='QuienesSomos/:id' element={<User />} />
+          <Route path='QuienesSomos' element={<AboutUs />} />
+          <Route path='Mensaje' element={<Message name='Janns' lastname='Patino Saucedo' note='Espero y disfrute de todos nuestros productos' />} />
+          <Route path='Prestamo' element={<Rent />} />
+        </Routes>
+      </Router>
   )
 }
 

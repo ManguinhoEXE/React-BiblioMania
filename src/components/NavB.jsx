@@ -12,9 +12,9 @@ const NavB = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Link style={{ color: "#ebb24d" }} to="/" className='seccion navText'>Inico</Link>
-                        <Link style={{ color: "#ebb24d" }} to="QuienesSomos" className='seccion navText'>Quienes Somos</Link>
-                        <Link style={{ color: "#ebb24d" }} to="Mensaje" className='seccion navText'>Mensaje</Link>
-                        <Link style={{ color: "#ebb24d" }} to="Prestamo" className='seccion navText'>Prestamo</Link>
+                        <Link style={{ color: "#ebb24d" }} to="/QuienesSomos" className='seccion navText'>Quienes Somos</Link>
+                        <Link style={{ color: "#ebb24d" }} to="/Mensaje" className='seccion navText'>Mensaje</Link>
+                        <Link style={{ color: "#ebb24d" }} to="/Prestamo" className='seccion navText'>Prestamo</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
