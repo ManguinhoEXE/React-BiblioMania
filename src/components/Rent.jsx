@@ -122,7 +122,7 @@ const Rent = () => {
                         <Button type="submit" className="button">Registrar</Button>
                     </Form>
                 </div>
-                <div fluid className="container-table">
+                <div className="container-table">
                     <Table striped borderless hover className="table">
                         <thead>
                             <tr>
